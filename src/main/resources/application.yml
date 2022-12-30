@@ -2,3 +2,10 @@ server:
   port: 18081
   servlet:
     context-path: /pool2
+  tomcat:
+    accesslog:
+      enabled: true
+      pattern: "%h %l %u [%{yyyy-MM-dd'T'HH:mm:ss.SSSZ}t] %D %S '%r' %s %b '%{Referer}i' '%{User-Agent}i'"
+      directory: /tmp/logs/tomcat
+      prefix: access_log
+    basedir: /var
